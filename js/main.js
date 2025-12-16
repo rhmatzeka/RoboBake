@@ -19,4 +19,22 @@ document.addEventListener("DOMContentLoaded", () => {
         alert('Order berhasil dikirim! Kami hubungi via WA. Terima kasih!');
         e.target.reset();
     });
+
+
+    // Toast Order Notification
+const toastElement = document.getElementById('orderToast');
+const toastBody = document.getElementById('productName');
+const toast = new bootstrap.Toast(toastElement);
+
+document.querySelectorAll('.buy-now-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const productName = btn.getAttribute('data-product');
+        toastBody.textContent = productName;
+        toast.show();
+        
+        // Optional: tambah efek getar kecil pada tombol
+        btn.classList.add('pulse-btn');
+        setTimeout(() => btn.classList.remove('pulse-btn'), 1000);
+    });
+});
 });

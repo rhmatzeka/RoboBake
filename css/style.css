@@ -14,11 +14,41 @@ body { font-family: 'Rajdhani', sans-serif; background: #000; color: #fff; overf
 .navbar { background: rgba(0,0,0,0.8) !important; backdrop-filter: blur(12px); transition: 0.4s; }
 
 /* Hero */
-.typing-effect { font-family: 'Orbitron', monospace; border-right: 4px solid #00ffff; animation: typing 3.5s steps(40) forwards, blink 0.8s infinite; }
-@keyframes typing { from { width: 0; } to { width: 100%; } }
-@keyframes blink { 50% { border-color: transparent; } }
-.pulse-btn { background: linear-gradient(45deg, #00ffff, #ff00ff); border: none; padding: 15px 40px; animation: pulse 2s infinite; }
-@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(0,255,255,0.7); } 70% { box-shadow: 0 0 0 20px transparent; } }
+.typing-effect {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 4px solid #00ffff;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 3.5s steps(40) forwards, blink 0.8s infinite step-end;
+}
+
+.typing-delay {
+    display: inline-block;
+    opacity: 0;
+    animation: appear 0.1s forwards 3.5s; /* Muncul setelah typing selesai */
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 16ch; } /* "Selamat Datang di " ≈ 16 karakter + spasi */
+}
+
+@keyframes blink {
+    0%, 100% { border-color: #00ffff; }
+    50% { border-color: transparent; }
+}
+
+@keyframes appear {
+    to { opacity: 1; }
+}
+
+/* Pastikan cursor blink hanya pada bagian typing */
+.typing-effect::after {
+    content: '';
+    border-right: 4px solid #00ffff;
+    animation: blink 0.8s infinite step-end;
+}
 
 /* EFEK CAHAYA MENYAPU */
 .sweep-light {
