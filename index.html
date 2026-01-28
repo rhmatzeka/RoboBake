@@ -45,15 +45,18 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 text-white">
-                    <h1 class="display-3 fw-bold mb-4">
-    <span class="typing-effect">Selamat Datang di </span>
-    <span class="neon-text typing-delay">RoboBake</span>
-</h1>
-                    <p class="lead fs-4 mb-4">Toko roti futuristik dibuat Chef Profesional. Roti segar, rasa istimewa!</p>
+                    <h1 class="display-3 fw-bold mb-4 hero-title">
+                        <span class="typing-effect">RoboBake</span>
+                    </h1>
+                    <div class="robot-divider mb-4"></div>
+                    <p class="lead fs-4 mb-4 hero-subtitle">Toko roti futuristik dengan teknologi Robot. Roti segar, rasa istimewa, 24 jam non-stop!</p>
                     <a href="https://wa.me/6289514509392" class="btn btn-primary btn-lg pulse-btn">Pesan Sekarang</a>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <img src="assets/images/roti_1.jpg" class="img-fluid rounded-4 shadow-lg hero-image" alt="Roti" loading="lazy">
+                    <div class="hero-image-container">
+                        <div class="robot-frame"></div>
+                        <img src="assets/images/roti_1.jpg" class="img-fluid rounded-4 shadow-lg hero-image" alt="Roti" loading="lazy">
+                    </div>
                 </div>
             </div>
         </div>
@@ -294,16 +297,96 @@
         </div>
     </section>
 
+    <!-- Statistics Section -->
+    <section class="py-5 stats-section">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card glow-hover">
+                        <div class="stat-number counter" data-target="5000">0</div>
+                        <div class="stat-label">Pelanggan Puas</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card glow-hover">
+                        <div class="stat-number counter" data-target="15">0</div>
+                        <div class="stat-label">Jenis Roti</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card glow-hover">
+                        <div class="stat-number counter" data-target="99">0</div>
+                        <div class="stat-label">% Kepuasan</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card glow-hover">
+                        <div class="stat-number counter" data-target="24">0</div>
+                        <div class="stat-label">Jam Operasional</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 testimonial-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold neon-title">Testimoni Pelanggan</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card sweep-light">
+                        <div class="stars mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Rotinya luar biasa fresh dan enak! Teknologi robot mereka membuat setiap produk berkualitas tinggi. Sangat rekomen!"</p>
+                        <div class="testimonial-author">
+                            <strong class="text-cyan">Budi Santoso</strong>
+                            <p class="mb-0 text-muted">Jakarta</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card sweep-light">
+                        <div class="stars mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Delivery cepat dan roti tetap hangat saat tiba. Harga terjangkau dengan kualitas premium. Jadi pelanggan setia!"</p>
+                        <div class="testimonial-author">
+                            <strong class="text-magenta">Siti Rahma</strong>
+                            <p class="mb-0 text-muted">Depok</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card sweep-light">
+                        <div class="stars mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Inovasi dengan robot baker sangat menarik! Roti tidak pernah mengecewakan, selalu konsisten. Layanan terbaik!"</p>
+                        <div class="testimonial-author">
+                            <strong class="text-green">Ahmad Wijaya</strong>
+                            <p class="mb-0 text-muted">Tangerang</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact & Footer -->
     <section id="contact" class="py-5">
         <div class="container text-white">
             <h2 class="text-center display-4 fw-bold neon-title mb-5">Hubungi Kami</h2>
             <div class="col-lg-8 mx-auto">
-                <form class="row g-3">
-                    <div class="col-md-6"><input type="text" class="form-control" placeholder="Nama Lengkap"></div>
-                    <div class="col-md-6"><input type="text" class="form-control" placeholder="WA / Email"></div>
-                    <div class="col-12"><input type="text" class="form-control" placeholder="Alamat"></div>
-                    <div class="col-12"><textarea class="form-control" rows="4" placeholder="Pesan & Order"></textarea></div>
+                <form id="contactForm" class="row g-3">
+                    <div class="col-md-6"><input type="text" class="form-control" placeholder="Nama Lengkap" required></div>
+                    <div class="col-md-6"><input type="email" class="form-control" placeholder="Email" required></div>
+                    <div class="col-md-6"><input type="tel" class="form-control" placeholder="No. WhatsApp" required></div>
+                    <div class="col-md-6"><input type="text" class="form-control" placeholder="Alamat" required></div>
+                    <div class="col-12"><textarea class="form-control" rows="4" placeholder="Pesan & Order" required></textarea></div>
                     <div class="col-12"><button type="submit" class="btn btn-primary btn-lg w-100 pulse-btn">Kirim Order</button></div>
                 </form>
             </div>
