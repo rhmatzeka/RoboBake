@@ -87,6 +87,3 @@ assets/images/      Product photos (roti_1.jpg to roti_6.jpg) and team photos
 
 Dark/light theme toggle, English and Indonesian versions, online payments, an admin dashboard, and order tracking.
 
-## License
-
-MIT
